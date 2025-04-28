@@ -1,0 +1,92 @@
+/* Tablets and below */
+@media (max-width: 1024px) {
+    body {
+        flex-direction: row;
+        height: auto;
+        padding: 20px;
+    }
+
+    #container {  flex-direction: column; margin: 5px; }
+
+    #right { width: 102%;  margin: 26rem 0;  height: 20rem;}
+        #rhead {flex-basis: 8rem;}
+            #navbar a {font-size: 40px;}
+
+        #box { flex-basis: 22rem; border-bottom-right-radius: 5rem;}
+             #still{
+                width: 40rem;
+                margin: 2rem;
+                height: 36rem;
+                margin-left: 6rem;}
+        .carousel-item{min-width: 40rem;  min-height: 34rem;}
+                .quote {margin: 5rem; font-size: 60px;}
+                #skills > div { height: 100px; width: 100px;}
+        .rfoot { flex-basis: 4rem;}
+
+    #left {  width: 95%;  margin-bottom: 5rem;} 
+    #left li img { width: 65px; height: 65px;
+            display: none; transition: all 0.5s;}
+            #left button span {
+                font-size: 16px;}
+    
+        #middle{
+            border: 2px solid burlywood;
+            height: 28rem;
+            width: 28rem;
+            margin-top: 6px;    
+            margin-left: 200px;
+            border-radius: 50%;}
+
+    span img {
+        height: inherit;
+        width: inherit;}
+
+    .lhead { width: 110%; font-size: 38px;}
+
+    #profile{
+        display: flex;
+        width: 25em;}
+
+    #lmid{ width: 58%;}
+    #prbtn{ width: 150px; height: 70px;margin-left: 7rem;} #lmid button  span {font-size: 20px;}
+
+    #lmid ul{height: 20rem; width: 320px;}
+
+    .lfoot {
+        width: 110%; .para{ font-size: 28px;}} 
+    .lfoot   h2{font-size: 34px;}  
+    
+
+    #resbtn{  height: 40px;  width: 200px; margin-left: 600px;}
+}
+
+/* #projects > div {
+    border: 2px solid black;
+    width: 15rem;
+    height: 10rem;
+    margin: 1.5rem;
+    border-radius: 10%;
+    transition: all ease 0.6s;
+    background-color: #f5d393;
+    box-shadow: 10px 10px; 
+    transform: rotate3d(-1, 1, 0, 20deg);
+} */
+
+/* Phones and below */
+@media (max-width: 768px) { 
+
+    /* .carousel-item {
+        min-width: 100%;
+    }
+
+    #skills {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 480px) {
+    span img {
+        height: 10rem;
+        width: 10rem;
+    } */
+} 
