@@ -63,12 +63,23 @@
               <div class="carousel-item" > 
                 <span class="quote" id="quote" >Loading quote...</span> </div>
 
-              <div id="skills" class="carousel-item"> 
+              <!-- <div id="skills" class="carousel-item"> 
                 <div><img style="height: inherit;" src="https://github.com/SamIeer/sameer_pf/blob/main/imag/SKILLS/html-5.png?raw=true" alt="html"></div>
                 <div><img style="height: inherit;" src="https://github.com/SamIeer/sameer_pf/blob/main/imag/SKILLS/css-3.png?raw=true" alt="css"></div>
                 <div><img style="height: inherit;" src="https://github.com/SamIeer/sameer_pf/blob/main/imag/SKILLS/js.png?raw=true" alt="Js"></div>
                 <div><img style="height: inherit;" src="https://github.com/SamIeer/sameer_pf/blob/main/imag/SKILLS/c-.png?raw=true" alt="CPP"></div>
-              </div>
+              </div> -->
+              <div id="skills">
+                {% for skill in skills %}
+                    <div class="skill">
+                        <h3>{{ skill.name }}</h3>
+                        <p>{{ skill.description }}</p>
+                    </div>
+                {% empty %}
+                    <p>No skills added yet.</p>
+                {% endfor %}
+            </div>
+
 
               <div id="projects" class="carousel-item"> 
                   <div>
