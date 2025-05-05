@@ -3,8 +3,8 @@
 <html lang="en">
 <head>
     <title>My Portfolio</title>
-    <link rel="stylesheet" href="{% static 'css/style.css' %}">
-    <link rel="stylesheet" href="{% static 'css/phonestyle.css' %}">
+    <link rel="stylesheet" href="{% static 'csss/style.css' %}">
+    <link rel="stylesheet" href="{% static 'csss/phonestyle.css' %}">
 </head>
 <body>
     <div id="container">
@@ -22,7 +22,7 @@
                 <ul>
                   <li style="border-color: #69a6d8"><a  href="https://www.linkedin.com/in/sameer-chauhan-363298269/" target="_blank"><img  src="https://github.com/SamIeer/sameer_pf/blob/main/imag/PROFILE/linkedin.png?raw=true" alt="linkedin" style="background-color: #90CAF9;"></a></li>
                   <li style="border-color: #b09a9a"><a href="https://github.com/SamIeer" target="_blank"><img  src="https://github.com/SamIeer/sameer_pf/blob/main/imag/PROFILE/github.png?raw=true" alt="github" style="background-color: #595252;"></a></li>
-                  <li style="border-color: #d32222"><a href="sameerchauhan212204@gmail.com" target="_blank"><img  src="https://github.com/SamIeer/sameer_pf/blob/main/imag/PROFILE/gmail.png?raw=true" alt="Gmail" style="background-color: #f64747;"></a></li>
+                  <li style="border-color: #d32222"><a href="sameerchauhan212204@gmail.com"><img  src="https://github.com/SamIeer/sameer_pf/blob/main/imag/PROFILE/gmail.png?raw=true" alt="Gmail" style="background-color: #f64747;"></a></li>
                   <li style="border-color: #ffc8d2"><a href="https://www.instagram.com/16._sameerr/" target="_blank" ><img src="https://github.com/SamIeer/sameer_pf/blob/main/imag/PROFILE/instagram.png?raw=true" alt="instagram" style="background-color:#de93a0;"></a></li>
                 </ul>
             </div>
@@ -63,24 +63,11 @@
               <div class="carousel-item" > 
                 <span class="quote" id="quote" >Loading quote...</span> </div>
 
-              <!-- <div id="skills" class="carousel-item"> 
-                <div><img style="height: inherit;" src="https://github.com/SamIeer/sameer_pf/blob/main/imag/SKILLS/html-5.png?raw=true" alt="html"></div>
-                <div><img style="height: inherit;" src="https://github.com/SamIeer/sameer_pf/blob/main/imag/SKILLS/css-3.png?raw=true" alt="css"></div>
-                <div><img style="height: inherit;" src="https://github.com/SamIeer/sameer_pf/blob/main/imag/SKILLS/js.png?raw=true" alt="Js"></div>
-                <div><img style="height: inherit;" src="https://github.com/SamIeer/sameer_pf/blob/main/imag/SKILLS/c-.png?raw=true" alt="CPP"></div>
-              </div> -->
-              <div id="skills">
-                {% for skill in skills %}
-                    <div class="skill">
-                        <h3>{{ skill.name }}</h3>
-                        <p>{{ skill.description }}</p>
-                    </div>
-                {% empty %}
-                    <p>No skills added yet.</p>
-                {% endfor %}
-            </div>
+<!-- ============================================   SKILL SECTION  ========================================= -->
+    <div id="skills" class="carousel-item"></div>
 
 
+<!-- =============================================    PROJECT SECTION   ============================================ -->
               <div id="projects" class="carousel-item"> 
                   <div>
                       <img style="    
@@ -115,5 +102,21 @@
     </footer>
 
 </body>
-<script src="{% static 'js/script.js' %}"></script>
+<script src="{% static 'jss/script.js' %}"></script>
+<script>
+//   fetch('/api/skills/')
+//     .then(res => res.json())
+//     .then(data => {
+//       const container = document.getElementById('skills');
+//       container.innerHTML = ''; // Clear existing content
+//       data.forEach(skill => {
+//         container.innerHTML += `
+//           <div class="skill-box">
+//             <h3>${skill.name}</h3>
+//             <p>${skill.description}</p>
+//           </div>
+//         `;
+//       });
+//     });
+// </script>
 </html>

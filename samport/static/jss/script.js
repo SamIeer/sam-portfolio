@@ -71,17 +71,28 @@ for (let i = 0; i < optn.length; i++) {
     });
 }
 
-fetch("https://type.fit/api/quotes")
-.then(function(response) {
-    return response.json();
-})
-.then(function(data) {
-    const randomIndex = Math.floor(Math.random() * data.length);
-    const quote = data[randomIndex];
-    const author = quote.author ? quote.author : "Unknown";
-    document.getElementById('quote').innerText = `"${quote.text}" - ${author}`;
-})
-.catch(function(error) {
-    console.error('Error fetching quote:', error);
-    document.getElementById('quote').innerText = 'Failed to load quote.';
+
+fetch('/api/skills/')
+.then(res => res.json())
+.then(data => {
+  const container = document.getElementById('skills');
+  container.innerHTML = ''; // Clear existing content
+
+  data.forEach(skill => {
+    container.innerHTML += `
+      <div class="skill-box" style="
+        background-image: url('${skill.iimage_url}');
+        background-size: cover;
+        background-position: center;
+        color: white; 
+        padding: 20px;
+        border-radius: 12px;
+        margin: 10px;
+      ">
+        <h3>${skill.name}</h3>
+        <p>${skill.description}</p>
+      </div>
+    `;
+  });
 });
+

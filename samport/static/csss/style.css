@@ -242,16 +242,51 @@ h2{font-size: 20px;
     transition: opacity 1s ease;
     margin-left: 1rem;}
 
-    /* SKILL SECTION */
+/* ======================================= SKILL SECTION ============================================ */
+
 #skills {
-        display: grid;
-        grid-template-columns: repeat(2, 0.5fr);
-        grid-gap: 0px;
-        padding: 6px;}
-    #skills > div {
-        height: 60px;
-        width: 60px;}
-        
+display: grid;
+grid-template-columns: repeat(3, 0.5fr);
+gap: 0.5rem;
+padding: 1rem;
+}
+
+.skill-box {
+    background-color: #007bff; /* bright blue */
+    color: white;
+    padding: 1rem;
+    border-radius: 10px;
+    margin: 10px;
+    width: 70px;
+    height: 80px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    word-wrap: break-word;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: 0.5rem; /* space between heading and paragraph */
+}
+
+#skills > div.skill-box:hover {
+background-color: #0056b3;
+box-shadow: 10px 10px;
+transform: rotate3d(-1, 1, 0, 20deg);
+}  
+
+.skill-box h3 {
+    font-size: 1.2rem;
+    margin: 0;
+}
+
+.skill-box p {
+    font-size: 0.80rem;
+    margin: 0;
+    line-height: 1;
+    word-break: break-word;
+}
+
+/*------------------------------------------------------------------ PROJECT SECTION */
 #projects{
     display: grid;
     grid-template-columns: repeat(2, 0.5fr);
