@@ -80,24 +80,19 @@ fetch('/api/skills/')
 
   data.forEach(skill => {
     container.innerHTML += `
-      <div class="skill-box" style="
-  background-image: url('${skill.iimage_url}');
-  background-size: cover;
-  background-position: center;
-  color: white;
-  padding: 20px;
-  border-radius: 12px;
-  margin: 10px;
-  background-color: rgba(255, 255, 255, 0.1);  /* translucent layer */
-  backdrop-filter: blur(10px);                 /* blur effect */
-  -webkit-backdrop-filter: blur(10px);         /* Safari support */
-  border: 1px solid rgba(255, 255, 255, 0.2);   /* soft border */
-  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);    /* subtle shadow */
-">
-        <h3>${skill.name}</h3>
-        <p>${skill.description}</p>
-      </div>
-    `;
+    <div class="skill-box" style="
+        background-image: url('${skill.iimage_url}');
+        background-size: cover;
+        background-position: center;
+        color: white; 
+        padding: 20px;
+        border-radius: 12px;
+        margin: 10px;
+      ">
+`;
+//   <h3>${skill.name}</h3>
+//   <p>${skill.description}</p>
+// </div>
   });
 });
 
@@ -122,3 +117,20 @@ fetch('/api/projects/')
 
 
 
+
+//   <div class="skill-box" style="
+//   background: rgba(255, 255, 255, 0.1);
+//   backdrop-filter: blur(10px);
+//   -webkit-backdrop-filter: blur(10px);
+//   background-image: url('${skill.iimage_url}');
+//   background-size: cover;
+//   background-position: center;
+//   color: white;
+//   padding: 20px;
+//   border-radius: 12px;
+//   margin: 10px;
+//   border: 1px solid rgba(255, 255, 255, 0.2);
+//   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+//   position: relative;
+//   z-index: 0;
+// ">
