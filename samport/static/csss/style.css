@@ -237,7 +237,7 @@ h2{font-size: 20px;
     box-shadow: 0px 0px 30px rgba(142, 152, 240, 0.37);
     border: 2px solid rgba(247, 120, 236, 0.18);
     position: relative;
-    min-height: 91%;
+    min-height: 80%;
     min-width: 26rem;
     transition: opacity 1s ease;
     margin-left: 1rem;}
@@ -253,12 +253,12 @@ padding: 1rem;
 
 .skill-box {
     background-color: #007bff; /* bright blue */
-    color: white;
+    color: rgb(219, 33, 33);
     padding: 1rem;
     border-radius: 10px;
     margin: 10px;
-    width: 70px;
-    height: 80px;
+    width: 60px;
+    height: 60px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     word-wrap: break-word;
     text-align: center;
@@ -276,35 +276,73 @@ transform: rotate3d(-1, 1, 0, 20deg);
 
 .skill-box h3 {
     font-size: 1.2rem;
-    margin: 0;
+    margin: 0; color: black;
 }
 
 .skill-box p {
     font-size: 0.80rem;
     margin: 0;
     line-height: 1;
-    word-break: break-word;
+    word-break: break-word; color: rgb(228, 35, 35);
 }
 
 /*------------------------------------------------------------------ PROJECT SECTION */
-#projects{
+#projects {
     display: grid;
-    grid-template-columns: repeat(2, 0.5fr);
-    grid-gap: 0px;
-    padding: 6px;
-}
-#projects > div{
-    border: 2px solid black;
-    width: 10rem; height: 7rem;
-    margin: 0.5rem; border-radius: 10%;
-    transition: all ease 0.6s;
+    grid-template-columns: repeat(2, 0.5fr); /* Two columns */
+    gap: 20px;
+    padding: 10px;
+    justify-content: center;
 }
 
-#projects > div:hover{
+  
+  #projects > .project-card {
+    /* border: 2px solid black; */
+    border-left: 2px solid;
+    border-right: 2px solid;
+    border-radius: 20px;
+    width: 10rem;
+    height: 8rem;
+    transition: all 0.6s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#projects > .project-card:hover {
     background-color: #f5d393;
-    box-shadow: 10px 10px; 
+    box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.2);
     transform: rotate3d(-1, 1, 0, 20deg);
 }
+
+
+.project-card img {
+    width: 10rem;
+    height: 60px;
+    object-fit: cover;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.project-card a {
+    font-weight: bold;
+    text-decoration: none;
+    color: #333;
+    display: block;
+    margin-bottom: 8px;
+  }
+  
+  .project-card p {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 3; /* Show only 3 lines */
+    -webkit-box-orient: vertical;
+    color: #555;
+    font-size: 14px;
+  }
+
 
 #still{
             width: 27rem;

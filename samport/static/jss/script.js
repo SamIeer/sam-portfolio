@@ -81,18 +81,44 @@ fetch('/api/skills/')
   data.forEach(skill => {
     container.innerHTML += `
       <div class="skill-box" style="
-        background-image: url('${skill.iimage_url}');
-        background-size: cover;
-        background-position: center;
-        color: white; 
-        padding: 20px;
-        border-radius: 12px;
-        margin: 10px;
-      ">
+  background-image: url('${skill.iimage_url}');
+  background-size: cover;
+  background-position: center;
+  color: white;
+  padding: 20px;
+  border-radius: 12px;
+  margin: 10px;
+  background-color: rgba(255, 255, 255, 0.1);  /* translucent layer */
+  backdrop-filter: blur(10px);                 /* blur effect */
+  -webkit-backdrop-filter: blur(10px);         /* Safari support */
+  border: 1px solid rgba(255, 255, 255, 0.2);   /* soft border */
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);    /* subtle shadow */
+">
         <h3>${skill.name}</h3>
         <p>${skill.description}</p>
       </div>
     `;
   });
 });
+
+
+fetch('/api/projects/')
+  .then(res => res.json())
+  .then(data => {
+    const container = document.getElementById('projects');
+    container.innerHTML = ''; // Clear previous content
+
+    data.forEach(project => {
+      container.innerHTML += `
+        <div class="project-card">
+          <img src="${project.image}" alt="${project.title}">
+          <a href="${project.url}" target="_blank">${project.title}</a>
+          <p>${project.description}</p>
+        </div>
+      `;
+    });
+  })
+  .catch(error => console.error("Error fetching projects:", error));
+
+
 
